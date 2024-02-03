@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         IMAGE_TAG = "${BUILD_NUMBER}"
+        registryCredenial = 'Docker_hub_cred'
     }
 
     stages {
@@ -28,6 +29,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'push to repo'
+                    docker.withRegistry('', registryCredenial)
                     docker push avinashbasoorbs/welcome-app:${BUILD_NUMBER}
                     '''
                 }
