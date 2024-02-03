@@ -29,3 +29,6 @@ variable "subnet1-cidr2" {
 variable "subent_az" {
   default = "ap-south-1a"
 }
+variable "subent_az1" {
+  default = "ap-south-1b"
+}
