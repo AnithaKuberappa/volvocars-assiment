@@ -31,7 +31,7 @@ resource "aws_subnet" "demo_subnet1" {
 resource "aws_subnet" "demo_subnet2" {
   vpc_id                  = aws_vpc.demo-vpc.id
   cidr_block              = var.subnet1-cidr2
-  availability_zone       = var.subent_az
+  availability_zone       = var.subent_az1
   map_public_ip_on_launch = true
 
   tags = {
