@@ -112,7 +112,7 @@ module "eks" {
   source     = "./eks"
   vpc_id     = aws_vpc.demo-vpc.id
   sg_ids     = module.sgs.security_group_public
-  subnet_ids = [aws_subnet.demo_subnet2.id, aws_subnet.demo_subnet2.id]
+  subnet_ids = [aws_subnet.demo_subnet1.id, aws_subnet.demo_subnet2.id]
 
 }
 
