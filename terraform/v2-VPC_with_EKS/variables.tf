@@ -1,27 +1,31 @@
 variable "location" {
-    default = "ap-south-1"
+  default = "ap-south-1"
 }
 
 variable "os_name" {
-    default = "ami-09ba48996007c8b50"
+  default = "ami-09ba48996007c8b50"
 }
 
 variable "key" {
-    default = "rtp-03"
+  default = "aws-ansible"
 }
 
 variable "instance-type" {
-    default = "t2.small"
+  default = "t2.small"
 }
 
 variable "vpc-cidr" {
-    default = "10.10.0.0/16"  
+  default = "170.120.0.0/16"
 }
 
-variable "subnet1-cidr" {
-    default = "10.10.1.0/24"
-  
+variable "subnet1-cidr1" {
+  default = "170.120.0.0/17"
+
+}
+variable "subnet1-cidr2" {
+  default = "170.120.128.0/17"
+
 }
 variable "subent_az" {
-    default =  "ap-south-1a"  
+  default = "ap-south-1a"
 }
