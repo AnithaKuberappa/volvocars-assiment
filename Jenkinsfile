@@ -13,5 +13,15 @@ pipeline {
 
             }
         }
+        stage('Build Docker'){
+            steps{
+                script{
+                    sh '''
+                    echo 'Build Docker Image'
+                    docker build -t avinashbasoorbs/welcome-app:${BUILD_NUMBER} .
+                    '''
+                }
+            }
+        }
     }
 }
