@@ -23,5 +23,15 @@ pipeline {
                 }
             }
         }
+        stage('Push the artifacts'){
+            steps{
+                script{
+                    sh '''
+                    echo 'push to repo'
+                    docker push avinashbasoorbs/welcome-app:${BUILD_NUMBER}
+                    '''
+                }
+            }
+        }
     }
 }
