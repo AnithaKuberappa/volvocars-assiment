@@ -27,11 +27,11 @@ pipeline {
         stage('Push the artifacts'){
             steps{
                 script{
-                    sh '''
                     echo 'push to repo'
-                    docker.withRegistry('', registryCredenial)
-                    docker push avinashbasoorbs/welcome-app:${BUILD_NUMBER}
-                    '''
+                    withDockerRegistry(credentialsId: registryCredenial){
+                        sh "docker push avinashbasoorbs/welcome-app:${BUILD_NUMBER}"
+                    }
+                    
                 }
             }
         }
