@@ -1,4 +1,4 @@
----> Pipeline to build and deploy containerized application
+---> Pipeline to build and deploy containerized application \n
 ---> Created the eks cluster in AWS, using the terraform u can look at the code in terraform folder.
 ---> Jenkins files to build CI
 ---> Docker file to build Docker image
