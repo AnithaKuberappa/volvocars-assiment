@@ -1,4 +1,6 @@
----> Pipeline to build and deploy containerized application \n
----> Created the eks cluster in AWS, using the terraform u can look at the code in terraform folder.
----> Jenkins files to build CI
----> Docker file to build Docker image
+--> Application built on python <br />
+---> As you suggested created the aws account and created the infra all like vpc, subnet route table, loadbalncer using terraform u can refer it in terraform folder <br />
+---> Pipeline to build and deploy containerized application  <br />
+---> Created the eks cluster in AWS, using the terraform u can look at the code in terraform folder. <br />
+---> Jenkins files to build CI <br />
+---> Docker file to build Docker image <br />
