@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout'){
             steps {
                 git credentialsId: 'githubcred', 
-                url: 'https://github.com/avinashbasoor12/volvocars-assiment.git'
+                url: 'https://github.com/AnithaKuberappa/volvocars-assiment.git'
 
             }
         }
@@ -19,7 +19,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Build Docker Image'
-                    docker build -t avinashbasoorbs/welcome-app:${BUILD_NUMBER} .
+                    docker build -t anithakuberappa/welcome-app:${BUILD_NUMBER} .
                     '''
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
                 script{
                     echo 'push to repo'
                     withDockerRegistry(credentialsId: registryCredenial){
-                        sh "docker push avinashbasoorbs/welcome-app:${BUILD_NUMBER}"
+                        sh "docker push anithakuberappa/welcome-app:${BUILD_NUMBER}"
                     }
                     
                 }
